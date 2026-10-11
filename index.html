@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Hamed &amp; Shahed — Wedding Invitation</title>
-<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<title>Hamed &amp; Shahd — Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 :root{--ivory:#f4e9dc;--cream:#efdfcd;--blush:#e3b9a6;--gold:#b98f5a;--brown:#5a3a26;--sky1:#f3c9a8;--sky2:#e9a98a;--box:rgba(255,248,238,.55);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ivory:#f4e9dc;--brown:#5a3a26}}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--ivory);color:var(--brown);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.6;overflow-x:hidden}
 .script{font-family:'Mrs Saint Delafield','Snell Roundhand',cursive;font-weight:400}
+.name-script{font-family:'Great Vibes','Mrs Saint Delafield',cursive;font-weight:400;letter-spacing:.02em}
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 20px 110px;overflow:hidden;background:#e9b79a url(images/hero.jpg) center bottom/cover no-repeat}
 .hero:before{display:none;content:"";position:absolute;left:0;right:0;top:50%;height:90px;background:radial-gradient(ellipse at 45% 0,rgba(255,235,200,.9),transparent 60%);}
 .photo-l,.photo-r{position:absolute;bottom:0;background-size:cover;background-position:center;pointer-events:none}
@@ -63,7 +64,7 @@ textarea{min-height:100px;resize:vertical}
  <div class="tag script">♡<br>two hearts<br>one journey<br>♥</div>
  <p class="small">Together with our families<br>we invite you to celebrate<br>the beginning of our forever</p>
  <div class="rule">♥</div>
- <h1 class="names script"><span>Hamed</span><span class="amp">&amp;</span><span>Shahed</span></h1>
+ <h1 class="names name-script"><span>Hamed</span><span class="amp">&amp;</span><span>Shahd</span></h1>
  <button class="btn" id="open">Open Our Invitation ♥</button>
 </header>
 <main class="paper" id="paper"><div class="wrap">
@@ -83,37 +84,33 @@ textarea{min-height:100px;resize:vertical}
    <svg class="map" viewBox="0 0 130 80"><rect width="130" height="80" fill="#e6ddc8"/><path d="M0 50l130-25M40 0l25 80M90 0l-15 80M0 20l100 60" stroke="#fff" stroke-width="4" fill="none"/><rect x="95" y="52" width="30" height="22" fill="#b9d3a5"/><path d="M65 14c-7 0-11 5-11 10 0 8 11 18 11 18s11-10 11-18c0-5-4-10-11-10z" fill="#d6402e"/><circle cx="65" cy="24" r="4" fill="#fff"/></svg></div>
   </div></div>
  <h2>Leave a Wish</h2>
- <form class="wish" id="wf"><input id="wn" placeholder="Your name" maxlength="40" required aria-label="Your name"><textarea id="wm" placeholder="Write a message for Hamed &amp; Shahed" maxlength="400" required aria-label="Your message"></textarea><button class="btn" type="submit" style="justify-self:center">Send Your Wish ♥</button></form>
+ <form class="wish" id="wf"><input id="wn" placeholder="Your name" maxlength="40" required aria-label="Your name"><textarea id="wm" placeholder="Write a message for Hamed &amp; Shahd" maxlength="400" required aria-label="Your message"></textarea><button class="btn" type="submit" style="justify-self:center">Send Your Wish ♥</button></form>
  <div class="wishes" id="wl"></div>
  <div class="end"><span class="lh">♡</span>We can’t wait to celebrate this beautiful new chapter with you.
   <div class="rule">♥</div>
-  <div class="names script"><span>Hamed</span> <span>&amp;</span> <span>Shahed</span></div>
+  <div class="names name-script"><span>Hamed</span> <span>&amp;</span> <span>Shahd</span></div>
   <div class="date">NOVEMBER 9, 2026 · 7:00 PM</div></div>
 </div></main>
 <script>
 const $=id=>document.getElementById(id);
-// Replace with the real Google Maps link
-const MAP_URL="https://maps.google.com/";$("maplink").href=MAP_URL;
+const MAP_URL="https://maps.app.goo.gl/TAySWHSQVJkZrDnd7?g_st=ac";$("maplink").href=MAP_URL;
 $("open").onclick=()=>{document.body.classList.add("opened");setTimeout(()=>$("paper").scrollIntoView({behavior:"smooth"}),80)};
 const T=new Date(2026,10,9,19,0,0);
 function tick(){let t=Math.max(0,T-new Date())/1e3|0;$("d").textContent=t/86400|0;$("h").textContent=t%86400/3600|0;$("m").textContent=t%3600/60|0;$("s").textContent=t%60}
 tick();setInterval(tick,1e3);
 // Soft piano-like loop (Web Audio)
-let ac,on=false,timer;const N=[261.6,329.6,392,523.3,392,329.6,293.7,349.2,440,587.3,440,349.2],B=[130.8,130.8,130.8,130.8,146.8,146.8];let i=0;
+let ac, isPlaying=false, timer; const N=[261.6,329.6,392,523.3,392,329.6,293.7,349.2,440,587.3,440,349.2],B=[130.8,130.8,130.8,130.8,146.8,146.8]; let i=0;
 function note(f,t,d,v){const o=ac.createOscillator(),g=ac.createGain();o.type="sine";o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.02);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g).connect(ac.destination);o.start(t);o.stop(t+d)}
-function step(){const t=ac.currentTime;note(N[i%N.length],t,2.2,.12);if(i%2==0)note(B[(i/2|0)%B.length],t,3,.1);i++}
+function step(){if(!ac) return; const t=ac.currentTime; note(N[i%N.length],t,2.2,.12); if(i%2==0) note(B[(i/2|0)%B.length],t,3,.1); i++; }
 // ===== Music: leave MUSIC_SRC empty for the built-in piano, or set a file, e.g. "music.mp3" =====
 const MUSIC_SRC="";
-const AC=window.AudioContext||window.webkitAudioContext;let paused=false,au;
-function ui(){$("ml").textContent=on?"PAUSE MUSIC":"PLAY MUSIC";$("mi").textContent=on?"❚❚":"♪";$("music").setAttribute("aria-pressed",on)}
-function play(){if(on)return;
- if(MUSIC_SRC){au=au||Object.assign(new Audio(MUSIC_SRC),{loop:true,volume:.7});au.play().then(()=>{on=true;ui()}).catch(()=>{})}
- else{ac=ac||new AC();ac.resume();on=true;step();timer=setInterval(step,700);ui()}}
-function pause(){on=false;if(au)au.pause();clearInterval(timer);ui()}
-$("music").onclick=()=>{if(on){paused=true;pause()}else{paused=false;play()}};
-// Autoplay: try at load; browsers usually allow sound only after the first tap/click/key, so start then
-try{if(MUSIC_SRC){play()}else{ac=new AC();ac.resume().then(()=>{if(ac.state==="running"&&!paused)play()}).catch(()=>{})}}catch(e){}
-["pointerdown","click","touchend","keydown"].forEach(ev=>addEventListener(ev,()=>{if(!on&&!paused)play()},{passive:true}));
+function ui(){ $("ml").textContent=isPlaying?"PAUSE MUSIC":"PLAY MUSIC"; $("mi").textContent=isPlaying?"❚❚":"♪"; $("music").setAttribute("aria-pressed", String(isPlaying)); }
+function ensureAudioContext(){ if(!ac){ const C=window.AudioContext||window.webkitAudioContext; if(!C) return false; ac=new C(); } if(ac.state==="suspended") ac.resume(); return true; }
+function startMusic(){ if(isPlaying) return; if(!ensureAudioContext()) return; isPlaying=true; step(); timer=setInterval(step,700); ui(); }
+function stopMusic(){ isPlaying=false; if(timer){ clearInterval(timer); timer=null; } ui(); }
+$("music").onclick=()=>{ if(isPlaying) stopMusic(); else startMusic(); };
+try{ if(ensureAudioContext()) { isPlaying=true; step(); timer=setInterval(step,700); ui(); } }catch(e){}
+["pointerdown","click","touchend","keydown"].forEach(ev=>addEventListener(ev,()=>{ if(!isPlaying) { try { if(ensureAudioContext()) { isPlaying=true; step(); timer=setInterval(step,700); ui(); } } catch (e){} } },{passive:true}));
 // Wishes (saved in this browser only)
 const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 // ===== Wishes: paste your Google Apps Script web-app URL below to share wishes with all guests =====
