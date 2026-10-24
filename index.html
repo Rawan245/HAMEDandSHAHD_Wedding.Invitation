@@ -39,8 +39,8 @@ h2{font-weight:500;font-size:14px;letter-spacing:.3em;text-transform:uppercase;m
 .wish{display:grid;gap:10px;margin:0 auto 22px}
 input,textarea{font:inherit;color:var(--ink);background:var(--box);border:1px solid var(--line);border-radius:6px;padding:10px 12px;width:100%}textarea{min-height:90px;resize:vertical}
 .wishes{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;text-align:left;margin-bottom:44px;padding:2px 2px 12px}
-.wishes blockquote{flex:0 0 62%;scroll-snap-align:start;margin:0;padding:14px 16px;background:var(--box);border:1px solid var(--line);border-radius:3px 12px 3px 12px;font-size:17px}
-.wishes cite{display:block;margin-top:6px;font-style:italic;color:var(--wine);font-size:17px}
+.wishes blockquote{flex:0 0 56%;scroll-snap-align:start;margin:0;padding:12px 14px;background:var(--box);border:1px solid var(--line);border-radius:3px 12px 3px 12px;font-size:16px}
+.wishes cite{display:block;margin-top:4px;font-style:italic;color:var(--wine);font-size:16px}
 .wishes::-webkit-scrollbar{height:5px}.wishes::-webkit-scrollbar-thumb{background:var(--line);border-radius:5px}
 .end{font-size:21px}.end .names{font-size:clamp(46px,12vw,62px);margin:6px 0}.end .names span{display:inline}
 .date{letter-spacing:.22em;font-size:14px}
@@ -63,7 +63,7 @@ input,textarea{font:inherit;color:var(--ink);background:var(--box);border:1px so
  <div class="cd"><div><b id="d">0</b><span>Days</span></div><div><b id="h">0</b><span>Hours</span></div><div><b id="m">0</b><span>Minutes</span></div><div><b id="s">0</b><span>Seconds</span></div></div>
  <div class="polaroid"><img src="images/couple.jpg" alt="Hands joined at the ceremony"></div>
  <h2>The Location</h2>
- <div class="lc"><p>Click to open in Google Maps</p><a class="btn" id="maplink" target="_blank" rel="noopener" href="https://maps.google.com/">Open Location ↗</a></div>
+ <div class="lc"><p>Click to open in Google Maps</p><a class="btn" id="maplink" target="_blank" rel="noopener" href="https://maps.app.goo.gl/TAySWHSQVJkZrDnd7?g_st=ac">Open Location ↗</a></div>
  <h2>Leave a Wish</h2>
  <form class="wish" id="wf"><input id="wn" placeholder="Your name" maxlength="40" required aria-label="Your name"><textarea id="wm" placeholder="Write a message for Hamed &amp; Shahd" maxlength="400" required aria-label="Your message"></textarea><button class="btn" type="submit" style="justify-self:center">Send Your Wish ♥</button></form>
  <div class="wishes" id="wl"></div>
@@ -75,7 +75,7 @@ input,textarea{font:inherit;color:var(--ink);background:var(--box);border:1px so
 <script>
 const $=id=>document.getElementById(id);
 // Replace with the real Google Maps link
-const MAP_URL="https://maps.google.com/";$("maplink").href=MAP_URL;
+const MAP_URL="https://maps.app.goo.gl/TAySWHSQVJkZrDnd7?g_st=ac";$("maplink").href=MAP_URL;
 $("open").onclick=()=>{document.body.classList.add("opened");setTimeout(()=>$("paper").scrollIntoView({behavior:"smooth"}),80)};
 const T=new Date(2026,10,9,19,0,0);
 function tick(){let t=Math.max(0,T-new Date())/1e3|0;$("d").textContent=t/86400|0;$("h").textContent=t%86400/3600|0;$("m").textContent=t%3600/60|0;$("s").textContent=t%60}
