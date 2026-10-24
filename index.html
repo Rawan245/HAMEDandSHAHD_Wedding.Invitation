@@ -1,95 +1,77 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Hamed &amp; Shahed — Wedding Invitation</title>
-<link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<title>Hamed &amp; Shahd — Wedding Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--ivory:#f4e9dc;--cream:#efdfcd;--blush:#e3b9a6;--gold:#b98f5a;--brown:#5a3a26;--sky1:#f3c9a8;--sky2:#e9a98a;--box:rgba(255,248,238,.55);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ivory:#f4e9dc;--brown:#5a3a26}}
+:root{--bg:#fff;--beige:#f3e8d9;--wine:#6b1d2f;--rose:#b9788a;--ink:#4a2c2a;--line:rgba(107,29,47,.35);--box:rgba(255,251,244,.7);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#fff}}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--ivory);color:var(--brown);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.6;overflow-x:hidden}
-.script{font-family:'Mrs Saint Delafield','Snell Roundhand',cursive;font-weight:400}
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 20px 110px;overflow:hidden;background:#e9b79a url(images/hero.jpg) center bottom/cover no-repeat}
-.hero:before{display:none;content:"";position:absolute;left:0;right:0;top:50%;height:90px;background:radial-gradient(ellipse at 45% 0,rgba(255,235,200,.9),transparent 60%);}
-.photo-l,.photo-r{position:absolute;bottom:0;background-size:cover;background-position:center;pointer-events:none}
-.photo-l{left:0;width:min(46vw,420px);aspect-ratio:390/310;background-image:url(images/l.jpg);-webkit-mask:linear-gradient(90deg,#000 55%,transparent),linear-gradient(0deg,#000 60%,transparent);-webkit-mask-composite:source-in;mask-composite:intersect;mask:linear-gradient(90deg,#000 55%,transparent),linear-gradient(0deg,#000 60%,transparent);mask-composite:intersect}
-.photo-r{right:0;width:min(44vw,400px);aspect-ratio:324/510;background-image:url(images/r.jpg);-webkit-mask:linear-gradient(270deg,#000 60%,transparent),linear-gradient(0deg,#000 80%,transparent);-webkit-mask-composite:source-in;mask:linear-gradient(270deg,#000 60%,transparent),linear-gradient(0deg,#000 80%,transparent);mask-composite:intersect}
-.hero>*{position:relative;z-index:2}.hero .names{text-shadow:0 0 18px rgba(255,235,210,.55)}
-.music{position:absolute;top:calc(18px + env(safe-area-inset-top,0px));left:18px;z-index:5;background:none;border:0;color:var(--brown);font:inherit;font-size:14px;letter-spacing:.18em;cursor:pointer;display:flex;gap:8px;align-items:center;padding:8px}
-.music:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--brown);outline-offset:3px}
-.small{font-size:clamp(13px,3.2vw,16px);letter-spacing:.24em;text-transform:uppercase;line-height:1.9;max-width:340px;margin:0 auto}
-.rule{display:flex;align-items:center;gap:12px;max-width:300px;margin:14px auto;color:var(--brown)}.rule:before,.rule:after{content:"";flex:1;height:1px;background:var(--gold);opacity:.7}
-.names{font-size:clamp(84px,24vw,170px);line-height:.78;margin:14px 0 26px;color:var(--brown)}
-.names span{display:block}.names .amp{font-size:.45em;line-height:1.1}
-.names span:last-child{margin-left:.9em}
-.tag{position:absolute;top:calc(40px + env(safe-area-inset-top,0px));right:22px;font-size:22px;line-height:1;transform:rotate(-8deg);text-align:center;z-index:3}
-.btn{display:inline-block;border:1px solid rgba(185,143,90,.6);background:rgba(250,240,226,.88);color:var(--brown);font:inherit;font-size:18px;padding:12px 34px;border-radius:40px;cursor:pointer;text-decoration:none;transition:transform .25s,background .25s;box-shadow:0 8px 24px rgba(90,58,38,.18)}
-.btn:hover{transform:translateY(-2px);background:#fff6ea}
-.hero .btn{margin-top:6px}
-.paper{display:none;position:relative;margin-top:-60px;padding:110px 20px 70px;background:radial-gradient(circle at 20% 10%,#f8eee2,transparent 50%),radial-gradient(circle at 90% 60%,#ecd9c4,transparent 55%),var(--ivory);clip-path:polygon(0 4%,6% 1.5%,14% 3%,23% 0.8%,33% 2.6%,44% 1%,55% 3%,66% 1.2%,77% 2.8%,88% 1%,100% 3.5%,100% 100%,0 100%);text-align:center;z-index:3}
-.opened .paper{display:block;animation:unfold 1.4s cubic-bezier(.2,.8,.2,1) both}
-@keyframes unfold{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}
-.wrap{max-width:760px;margin:0 auto}
-h2{font-weight:500;font-size:clamp(14px,3.4vw,17px);letter-spacing:.3em;text-transform:uppercase;margin:0 0 26px}
-.info{display:grid;grid-template-columns:1fr 1fr 1fr;align-items:start;margin-bottom:44px}
-.info>div{padding:6px 10px;border-left:1px solid var(--gold)}.info>div:first-child{border:0}
-.info svg{width:30px;height:30px;stroke:var(--brown);fill:none;stroke-width:1.3;margin-bottom:8px}
-.info b{display:block;font-weight:500;font-size:clamp(16px,4.2vw,21px);line-height:1.3}.info i{font-size:14px}
-.cd{display:flex;gap:clamp(8px,2.5vw,18px);justify-content:center;margin-bottom:60px}
-.cd div{width:clamp(66px,19vw,100px);padding:14px 4px 10px;background:var(--box);border:1px solid rgba(185,143,90,.45);border-radius:14px 10px 15px 9px;box-shadow:inset 0 0 12px rgba(185,143,90,.15)}
-.cd b{display:block;font-weight:500;font-size:clamp(26px,8vw,40px);line-height:1.1;font-variant-numeric:tabular-nums}.cd span{font-size:14px}
-.loc{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;align-items:center;text-align:left;margin-bottom:54px}
-.polaroid{position:relative;background:#faf3e8;padding:10px;box-shadow:0 10px 26px rgba(90,58,38,.25);transform:rotate(-2.5deg)}
-.polaroid img{display:block;width:100%}.polaroid:before,.polaroid:after{content:"";position:absolute;width:90px;height:26px;background:rgba(214,190,150,.7)}
-.polaroid:before{top:-12px;left:-18px;transform:rotate(-6deg)}.polaroid:after{bottom:-10px;right:-18px;transform:rotate(-6deg)}
-.card{background:var(--box);border:1px solid rgba(185,143,90,.4);border-radius:6px;padding:18px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-.map{width:130px;height:80px;border-radius:4px}
-.wish{max-width:520px;margin:0 auto 30px;display:grid;gap:12px}
-input,textarea{font:inherit;color:var(--brown);background:var(--box);border:1px solid rgba(185,143,90,.5);border-radius:6px;padding:12px 14px;width:100%}
-textarea{min-height:100px;resize:vertical}
-.wishes{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;text-align:left;margin-bottom:60px;padding:4px 2px 14px;-webkit-overflow-scrolling:touch}.wishes blockquote{flex:0 0 calc((100% - 32px)/3);min-width:220px;scroll-snap-align:start}.wishes::-webkit-scrollbar{height:6px}.wishes::-webkit-scrollbar-thumb{background:rgba(185,143,90,.55);border-radius:6px}
-.wishes blockquote{margin:0;padding:16px 18px;background:var(--box);border:1px solid rgba(185,143,90,.35);border-radius:4px 12px 4px 12px;box-shadow:0 4px 12px rgba(90,58,38,.08);animation:unfold .7s both}
-.wishes cite{display:block;margin-top:8px;font-size:22px;font-style:normal}
-.end{font-size:clamp(20px,5vw,26px);max-width:420px;margin:0 auto}
-.end .names{font-size:clamp(60px,16vw,100px);margin:10px 0}.end .names span{display:inline;margin:0}
-.date{letter-spacing:.25em;font-size:15px}
-.flower{position:absolute;font-size:70px;opacity:.5;pointer-events:none}
-.lh{display:block;font-size:24px;opacity:.8}
-@media(max-width:620px){.loc{grid-template-columns:1fr}.polaroid{max-width:300px;margin:0 auto}.map{display:none}.card{justify-content:center;text-align:center}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;line-height:1.55;overflow-x:hidden}
+.script{font-family:'Great Vibes','Snell Roundhand',cursive;font-weight:400}
+.stage{padding:22px 12px}
+.card{position:relative;width:min(100%,500px);margin:0 auto;background:var(--beige);padding:34px 66px 50px;text-align:center;box-shadow:0 10px 40px rgba(90,60,50,.12);overflow:hidden}
+.card:before{content:"";position:absolute;inset:12px;border:1px solid var(--line);pointer-events:none}
+.card:after{content:"";position:absolute;inset:17px;border:1px solid rgba(107,29,47,.18);pointer-events:none}
+.fl{position:absolute;top:0;bottom:0;width:78px;background:url(images/floral.png) repeat-y center top/78px auto;pointer-events:none}
+.fl.l{left:-14px}.fl.r{right:-14px;transform:scaleX(-1)}
+.music{position:relative;z-index:3;display:flex;align-items:center;gap:8px;margin:0 auto 18px;background:none;border:0;color:var(--wine);font:inherit;font-size:13px;letter-spacing:.2em;cursor:pointer;padding:6px}
+.btn:focus-visible,.music:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+.intro{min-height:68vh;min-height:68svh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.small{font-size:14px;letter-spacing:.24em;text-transform:uppercase;line-height:1.9}
+.rule{display:flex;align-items:center;gap:12px;max-width:240px;width:100%;margin:14px auto;color:var(--wine);font-size:14px}.rule:before,.rule:after{content:"";flex:1;height:1px;background:var(--line)}
+.names{color:var(--wine);font-size:clamp(58px,17vw,84px);line-height:1.05;margin:10px 0 26px}.names span{display:block}.names .amp{font-size:.55em;line-height:1;color:var(--rose)}
+.btn{display:inline-block;border:1px solid var(--wine);background:transparent;color:var(--wine);font:inherit;font-size:17px;letter-spacing:.06em;padding:10px 28px;border-radius:30px;cursor:pointer;text-decoration:none;transition:.25s}
+.btn:hover{background:var(--wine);color:#fff}
+.paper{display:none;padding-top:30px}
+.opened .paper{display:block;animation:rise 1.2s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+h2{font-weight:500;font-size:14px;letter-spacing:.3em;text-transform:uppercase;margin:0 0 20px;color:var(--wine)}
+.info{display:grid;grid-template-columns:repeat(3,1fr);margin-bottom:34px}
+.info>div{padding:4px 6px;border-left:1px solid var(--line)}.info>div:first-child{border:0}
+.info svg{width:26px;height:26px;stroke:var(--wine);fill:none;stroke-width:1.2;margin-bottom:6px}
+.info b{display:block;font-weight:500;font-size:16px;line-height:1.3}.info i{font-size:13px}
+.cd{display:flex;gap:7px;justify-content:center;margin-bottom:44px}
+.cd div{flex:1;max-width:76px;padding:10px 2px 7px;background:var(--box);border:1px solid var(--line);border-radius:10px}
+.cd b{display:block;font-weight:500;font-size:28px;line-height:1.1;font-variant-numeric:tabular-nums}.cd span{font-size:13px}
+.polaroid{background:#fffaf2;padding:8px;box-shadow:0 6px 18px rgba(90,60,50,.2);transform:rotate(-2deg);max-width:230px;margin:0 auto 30px}.polaroid img{display:block;width:100%}
+.lc{background:var(--box);border:1px solid var(--line);border-radius:6px;padding:16px;margin-bottom:44px}.lc p{margin:0 0 12px;font-size:16px}
+.wish{display:grid;gap:10px;margin:0 auto 22px}
+input,textarea{font:inherit;color:var(--ink);background:var(--box);border:1px solid var(--line);border-radius:6px;padding:10px 12px;width:100%}textarea{min-height:90px;resize:vertical}
+.wishes{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;text-align:left;margin-bottom:44px;padding:2px 2px 12px}
+.wishes blockquote{flex:0 0 62%;scroll-snap-align:start;margin:0;padding:14px 16px;background:var(--box);border:1px solid var(--line);border-radius:3px 12px 3px 12px;font-size:17px}
+.wishes cite{display:block;margin-top:6px;font-style:italic;color:var(--wine);font-size:17px}
+.wishes::-webkit-scrollbar{height:5px}.wishes::-webkit-scrollbar-thumb{background:var(--line);border-radius:5px}
+.end{font-size:21px}.end .names{font-size:clamp(46px,12vw,62px);margin:6px 0}.end .names span{display:inline}
+.date{letter-spacing:.22em;font-size:14px}
+.dc{margin-bottom:30px}.dc-row{display:flex;align-items:center;gap:6px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px 0}.dc-row span{flex:1;letter-spacing:.26em;font-size:14px;text-transform:uppercase}.dc-row b{font-weight:400;font-size:62px;line-height:1;color:var(--wine);padding:0 10px;border-left:1px solid var(--line);border-right:1px solid var(--line)}.dc-year{letter-spacing:.5em;font-size:15px;margin:8px 0 14px;padding-left:.5em}.dc-time{font-size:24px;color:var(--wine);letter-spacing:.08em}.dc-sep{color:var(--rose);font-size:9px;margin:8px 0}.dc-place{font-size:19px;line-height:1.35}.dc-place i{font-size:14px}
+@media(max-width:420px){.card{padding:30px 58px 44px}.fl{width:64px;background-size:64px auto}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
-</style></head><body>
-<header class="hero" id="hero">
- <button class="music" id="music" aria-pressed="false"><span id="mi">♪</span><span id="ml">PLAY MUSIC</span></button>
- <div class="tag script">♡<br>two hearts<br>one journey<br>♥</div>
+</style></head><body><div class="stage"><main class="card" id="card"><div class="fl l"></div><div class="fl r"></div>
+<button class="music" id="music" aria-pressed="false"><span id="mi">♪</span><span id="ml">PLAY MUSIC</span></button>
+<section class="intro">
  <p class="small">Together with our families<br>we invite you to celebrate<br>the beginning of our forever</p>
  <div class="rule">♥</div>
- <h1 class="names script"><span>Hamed</span><span class="amp">&amp;</span><span>Shahed</span></h1>
+ <h1 class="names script"><span>Hamed</span><span class="amp">&amp;</span><span>Shahd</span></h1>
  <button class="btn" id="open">Open Our Invitation ♥</button>
-</header>
-<main class="paper" id="paper"><div class="wrap">
+</section>
+<section class="paper" id="paper">
  <h2>The Wedding Day</h2>
- <div class="info">
-  <div><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><b>Monday<br>November 9, 2026</b></div>
-  <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>7:00 PM</b></div>
-  <div><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.800 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/></svg><b>The Celebration</b><i>(See location below)</i></div>
- </div>
+ <div class="dc"><div class="dc-row"><span>Monday</span><b>09</b><span>November</span></div><div class="dc-year">2026</div><div class="dc-time">7:00 PM</div><div class="dc-sep">◆</div><div class="dc-place">The Celebration<br><i>(See location below)</i></div></div>
  <div class="rule">♥</div>
- <h2 style="margin-top:34px">Counting Down to Forever</h2>
- <div class="cd" aria-live="off"><div><b id="d">0</b><span>Days</span></div><div><b id="h">0</b><span>Hours</span></div><div><b id="m">0</b><span>Minutes</span></div><div><b id="s">0</b><span>Seconds</span></div></div>
- <div class="loc">
-  <div class="polaroid"><img src="images/couple.jpg" alt="Hands joined at the ceremony"></div>
-  <div><h2 style="margin-bottom:14px">The Location</h2>
-   <div class="card"><div>Click to open in Google Maps<br><br><a class="btn" style="font-size:16px;padding:8px 22px" id="maplink" target="_blank" rel="noopener" href="https://maps.google.com/">Open Location ↗</a></div>
-   <svg class="map" viewBox="0 0 130 80"><rect width="130" height="80" fill="#e6ddc8"/><path d="M0 50l130-25M40 0l25 80M90 0l-15 80M0 20l100 60" stroke="#fff" stroke-width="4" fill="none"/><rect x="95" y="52" width="30" height="22" fill="#b9d3a5"/><path d="M65 14c-7 0-11 5-11 10 0 8 11 18 11 18s11-10 11-18c0-5-4-10-11-10z" fill="#d6402e"/><circle cx="65" cy="24" r="4" fill="#fff"/></svg></div>
-  </div></div>
+ <h2 style="margin-top:26px">Counting Down to Forever</h2>
+ <div class="cd"><div><b id="d">0</b><span>Days</span></div><div><b id="h">0</b><span>Hours</span></div><div><b id="m">0</b><span>Minutes</span></div><div><b id="s">0</b><span>Seconds</span></div></div>
+ <div class="polaroid"><img src="images/couple.jpg" alt="Hands joined at the ceremony"></div>
+ <h2>The Location</h2>
+ <div class="lc"><p>Click to open in Google Maps</p><a class="btn" id="maplink" target="_blank" rel="noopener" href="https://maps.google.com/">Open Location ↗</a></div>
  <h2>Leave a Wish</h2>
- <form class="wish" id="wf"><input id="wn" placeholder="Your name" maxlength="40" required aria-label="Your name"><textarea id="wm" placeholder="Write a message for Hamed &amp; Shahed" maxlength="400" required aria-label="Your message"></textarea><button class="btn" type="submit" style="justify-self:center">Send Your Wish ♥</button></form>
+ <form class="wish" id="wf"><input id="wn" placeholder="Your name" maxlength="40" required aria-label="Your name"><textarea id="wm" placeholder="Write a message for Hamed &amp; Shahd" maxlength="400" required aria-label="Your message"></textarea><button class="btn" type="submit" style="justify-self:center">Send Your Wish ♥</button></form>
  <div class="wishes" id="wl"></div>
- <div class="end"><span class="lh">♡</span>We can’t wait to celebrate this beautiful new chapter with you.
+ <div class="end">We can’t wait to celebrate this beautiful new chapter with you.
   <div class="rule">♥</div>
-  <div class="names script"><span>Hamed</span> <span>&amp;</span> <span>Shahed</span></div>
+  <div class="names script"><span>Hamed</span> <span>&amp;</span> <span>Shahd</span></div>
   <div class="date">NOVEMBER 9, 2026 · 7:00 PM</div></div>
-</div></main>
+</section></main></div>
 <script>
 const $=id=>document.getElementById(id);
 // Replace with the real Google Maps link
